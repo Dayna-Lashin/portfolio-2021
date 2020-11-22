@@ -1,0 +1,111 @@
+/***** GLOBAL STYLES ******/
+/* selects all elements and pseudo elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+/* Responsive image styles */
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+
+/***** HEADER STYLES *****/
+header {
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  z-index: 300; /* Stacks in front of particle div */
+}
+
+.main,
+.particles {
+  position: relative;
+  width: 100%;
+}
+
+.main {
+  height: 40vh; /* 40% of viewport height to line up with particles div */
+  position: relative;
+  z-index: 100; /* Stacks behind particle div and navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Lato', sans-serif; /* Overrides bootstrap font */
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #593e67;
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  height: 50vh; /* 50% of viewport height */
+  z-index: 200; /* Stacks in front of main section and behind navbar */
+  transform-style: preserve-3d;
+  /*animation: rotate-container 5s infinite ease-in-out alternate;*/
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  10% ,90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(45vw);
+    opacity: 0;
+  }
+}
+
+/*@keyframes rotate-container {
+  0% {
+    transform:
+    perspective(1000px)
+    translateZ(0px);
+  }
+
+  100% {
+    transform:
+    perspective(1000px)
+    translateZ(150px);
+  }
+}*/
+
+
+/***** MAIN SECTION STYLES *****/
+main {
+  position: relative;
+}
+
+/***** ABOUT SECTION STYLES *****/
+
+figure.head-shot {
+  width: 50%;
+}
