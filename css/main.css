@@ -15,6 +15,7 @@ body {
 /* Responsive image styles */
 img {
   width: 100%;
+  border-radius: 25px;
 }
 
 figure {
@@ -32,14 +33,14 @@ nav {
   z-index: 300; /* Stacks in front of particle div */
 }
 
-.main,
+.hero,
 .particles {
   position: relative;
   width: 100%;
 }
 
-.main {
-  height: 40vh; /* 40% of viewport height to line up with particles div */
+.hero {
+  height: 40vh;  /*40% of viewport height to line up with particles div */
   position: relative;
   z-index: 100; /* Stacks behind particle div and navbar */
   display: flex;
@@ -49,12 +50,14 @@ nav {
 
 .title {
   font-family: 'Lato', sans-serif; /* Overrides bootstrap font */
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
   color: #ffffff;
   background: #593e67;
-  padding: 15px 20px;
+  padding: 15px 10px;
   border-radius: 5px;
+  width: 50%;
+  text-align: center;
 }
 
 .particles {
@@ -63,7 +66,6 @@ nav {
   height: 50vh; /* 50% of viewport height */
   z-index: 200; /* Stacks in front of main section and behind navbar */
   transform-style: preserve-3d;
-  /*animation: rotate-container 5s infinite ease-in-out alternate;*/
   overflow: hidden;
   cursor: pointer;
 }
@@ -84,28 +86,43 @@ nav {
   }
 }
 
-/*@keyframes rotate-container {
-  0% {
-    transform:
-    perspective(1000px)
-    translateZ(0px);
-  }
-
-  100% {
-    transform:
-    perspective(1000px)
-    translateZ(150px);
-  }
-}*/
-
 
 /***** MAIN SECTION STYLES *****/
 main {
   position: relative;
+  margin: 0 25px;
 }
+
 
 /***** ABOUT SECTION STYLES *****/
 
-figure.head-shot {
-  width: 50%;
+#about {
+  padding: 25px;
+}
+
+#about .content-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#about .image {
+  width: 60%;
+}
+
+#about .image-description {
+  width: 90%;
+}
+
+#about h2, #about p {
+  text-align: center;
+  margin: 15px 0;
+}
+
+
+/***** PROJECT SECTION STYLES *****/
+
+#project {
+  padding: 25px;
 }
