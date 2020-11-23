@@ -23,7 +23,7 @@
   </head>
 
   <body>
-	  <header>
+    <header>
       <!--Bootstrap nav with mobile view collapse-->
       <div class="container-fluid">
         <nav class="navbar navbar-expand-md bg-transparent navbar-light">
@@ -46,8 +46,8 @@
         </nav>
       </div>
       <!--Hero section-->
-      <div class="main" id="main">
-        <h1 class="title">Hi, I'm Dayna.</h1>
+      <div class="hero"><!-- id="main"> -->
+        <h1 class="title">Dayna Lashin</h1>
       </div>
       <!--Floating shapes section-->
       <div class="particles" id="particles"></div>
@@ -56,68 +56,98 @@
 
     <main>
       <section id="about">
-			  <div>
-          <figure class="head-shot">
-            <img src="img/website-headshot.jpg" alt="Dayna Lashin headshot" />
-          </figure>
-          <h2>I'm a Front End Developer based in New York.</h2>
-          <p>
-            I work in HTML, CSS, and JavaScript. You can find a collection of my projects below.
-          </p>
+        <div class="row">
+          <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+            <figure>
+              <img src="img/website-headshot.jpg" alt="Dayna Lashin headshot">
+            </figure>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+            <h2>
+              Hi, I'm Dayna.
+            </h2>
+            <p>
+              I'm a Front End Developer based in New York. I work in HTML, CSS, and JavaScript. You can find a collection of my projects below.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="projects">
-    	  <div class="project-1">
-          <h3>Unplugged</h3>
-          <p>
-            An off the grid retreat that leaves you feeling recharged
-          </p>
-          <!-- ICON ARROW GOES HERE -->
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-7 col-lg-6">
+              <div class="card mx-auto">
+                <div class="card-body">
+                  <h5 class="card-title">Unplugged</h5>
+                  <p class="card-text">An off the grid retreat</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-10 col-md-7 col-lg-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Hometown News</h5>
+                  <p class="card-text">Stay on top of the local news with this website </p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-10 col-md-7 col-lg-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Election Map</h5>
+                  <p class="card-text">An interactive election map with instant results</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-10 col-md-7 col-lg-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">LOLCat Clock</h5>
+                  <p class="card-text">A cat themed clock with a changing message</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--<div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-outline-primary btn-lg justify-content-center">
+              All Projects
+            </button>
+          </div>-->
+      </section>
+
+
+
+      <section id="contact">
+        <div class="row justify-content-center text-center">
+          <div class="col-">
+            <h4>
+              Let's Connect!
+            </h4>
+            <p>
+              I'd love to hear from you.
+            </p>
+            <div class="icons d-flex justify-content-around">
+              <p>
+                <i class="fab fa-github"></i>
+              </p>
+              <p>
+                <i class="fab fa-linkedin-in"></i>
+              </p>
+              <p>
+                <i class="far fa-envelope"></i>
+              </p>
+            </div>
+          </div>
         </div>
-
-        <div class="project-2">
-          <h3>Hometown News</h3>
-          <p>
-            Stay on top of the local news with this responsive website
-          </p>
-          <!-- ICON ARROW GOES HERE -->
-        </div>
-
-        <div class="project-3">
-          <h3>Election Map</h3>
-          <p>
-            An interactive election map with instant results
-          </p>
-          <!-- ICON ARROW GOES HERE -->
-        </div>
-
-        <div class=project-4>
-          <h3>LOLCat Clock</h3>
-          <p>
-            A cat themed clock with a changing message
-          </p>
-          <!-- ICON ARROW GOES HERE -->
-        </div>
-        <div class="more-projects">
-          <h3>All Projects</h3>
-          <!-- ICON ARROW GOES HERE -->
-        </div>
-       </section>
-
-       <section id="contact">
-         <h2>Let's Connect!</h2>
-         <p>
-           I'd love to hear from you.
-         </p>
-
-
-       </section>
-
-       <footer>
-        <p>
-          &copy; Copyright 2020 | Dayna Lashin
-        </p>
-       </footer>
+      </section>
 
 	  </main>
 
@@ -130,4 +160,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   </body>
+
 </html>
