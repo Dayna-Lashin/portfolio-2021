@@ -15,22 +15,35 @@ body {
 /* Responsive image styles */
 img {
   width: 100%;
-  border-radius: 25px;
+  border-radius: 50%;
 }
 
 figure {
   margin: 0;
 }
 
+h2, h3, h5, p {
+  font-family: 'Lato', sans-serif;
+}
 
-/***** HEADER STYLES *****/
+/***** MOBILE HEADER STYLES *****/
 header {
   position: relative;
 }
 
+.container-fluid {
+  padding: 0 !important;
+}
+
 nav {
   position: absolute;
+  top: 15px;
   z-index: 300; /* Stacks in front of particle div */
+}
+
+.fas, .fa-bars {
+  color: #C80428;
+  font-size: 30px;
 }
 
 .hero,
@@ -40,7 +53,7 @@ nav {
 }
 
 .hero {
-  height: 40vh;  /*40% of viewport height to line up with particles div */
+  height: 60vh;  /*40% of viewport height to line up with particles div */
   position: relative;
   z-index: 100; /* Stacks behind particle div and navbar */
   display: flex;
@@ -49,21 +62,20 @@ nav {
 }
 
 .title {
-  font-family: 'Lato', sans-serif; /* Overrides bootstrap font */
-  font-size: 20px;
-  font-weight: 700;
-  color: #ffffff;
-  background: #593e67;
+  font-family: 'Dancing Script', cursive; /* Overrides bootstrap font */
+  font-size: 36px;
+  font-weight: 400;
+  color: #2A1E5C;
   padding: 15px 10px;
   border-radius: 5px;
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 
 .particles {
   position: absolute;
   top: 0;
-  height: 50vh; /* 50% of viewport height */
+  height: 65vh; /* 50% of viewport height */
   z-index: 200; /* Stacks in front of main section and behind navbar */
   transform-style: preserve-3d;
   overflow: hidden;
@@ -96,33 +108,24 @@ main {
 
 /***** ABOUT SECTION STYLES *****/
 
-#about {
-  padding: 25px;
+figure {
+  width: 50%;
 }
 
-#about .content-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
+.padding-vertical {
+  padding: 25px 0;
 }
 
-#about .image {
-  width: 60%;
-}
-
-#about .image-description {
-  width: 90%;
-}
-
-#about h2, #about p {
-  text-align: center;
-  margin: 15px 0;
+.padding-bottom {
+  padding-bottom: 40px;
 }
 
 
 /***** PROJECT SECTION STYLES *****/
+#projects {
+  background-color: #FFFFFF;
+}
 
-#project {
-  padding: 25px;
+.remove-margin {
+  margin-bottom: 0 !important;
 }
