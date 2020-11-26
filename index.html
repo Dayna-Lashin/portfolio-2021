@@ -17,12 +17,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <!-- Google fonts -->
-    <!-- heading font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <!-- body font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   </head>
 
@@ -30,19 +26,19 @@
     <header>
       <!--Bootstrap nav with mobile view collapse-->
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-md bg-transparent">
-          <button data-toggle="collapse" data-target="#navbar-toggler" class="navbar-toggler border-0" type="button">
+        <nav class="navbar navbar-expand-md align-items-center">
+          <button class="btn navbar-toggler shadow-none border-0 ml-auto" data-toggle="collapse" data-target="#navbar-toggler" type="button">
             <span class="fas fa-bars"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbar-toggler">
-            <ul class="navbar-nav">
-              <li class="nav-item">
+          <div class="collapse navbar-collapse ml-auto" id="navbar-toggler">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ml-auto">
                 <a class="nav-link" href="#about">about</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item ml-auto">
                 <a class="nav-link" href="#">projects</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item ml-auto">
                 <a class="nav-link" href="#">contact</a>
               </li>
             </ul>
@@ -51,135 +47,135 @@
       </div>
 
       <!--Hero section-->
-      <div class="hero"><!-- id="main"> -->
+      <div class="hero">
+        <div class="content-wrapper">
           <h1 class="title">Dayna Lashin</h1>
+        </div>
       </div>
 
       <!--Floating shapes section-->
       <div class="particles" id="particles"></div>
     </header>
 
-    <main class="container">
+    <main class="container-fluid">
 
-      <section id="about" class="row d-flex justify-content-center"><!-- about section begins -->
-        <div class="col"> <!-- width of about section -->
+      <section id="about" class="about row d-flex justify-content-center"><!-- about section begins -->
+        <div class="col">
 
           <div class="row"> <!-- first row of about section -->
-            <div class="col padding-vertical">
-              <h2 class="text-center">
-                Hi, I'm Dayna.
-              </h2>
-            </div>
-          </div>
-
-          <div class="row d-flex justify-content-center"> <!-- second row of about section -->
             <div class="col-12 d-flex justify-content-center">
               <figure>
                 <img src="img/website-headshot.jpg" alt="Dayna Lashin headshot">
               </figure>
             </div>
-            <div class="col-12">
+          </div>
+
+          <div class="row d-flex justify-content-center"> <!-- second row of about section -->
+            <div class="col-10">
+              <h3 class="text-center">Hi, I'm Dayna.</h3>
               <p class="text-center">
-                I'm a Front End Developer based in New York. I work in HTML, CSS, and JavaScript. You can find a collection of my projects below.
+                I'm a Front End Developer based in New York. I work in HTML, CSS, and JavaScript. You can find some of my projects below.
               </p>
             </div>
-            <div class="col-6 d-flex justify-content-between padding-bottom">
+            <div class="col-6 d-flex justify-content-between icons">
               <span class="fab fa-github"></span>
               <span class="fab fa-linkedin-in"></span>
               <span class="far fa-envelope"></span>
+            </div>
+            <div class="col-8">
+              <div class="divider"></div>
             </div>
           </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="row"> <!-- projects section begins -->
+      <section id="projects" class="projects row"> <!-- projects section begins -->
         <div class="col">
 
-          <div class="row d-flex justify-content-center"> <!-- first row of project section -->
-            <div class="col-12 d-flex justify-content-center padding-vertical">
-              <div class="card w-75 text-center"> <!-- first card -->
-                <div class="card-body">
-                  <h5 class="card-title">Unplugged</h5>
-                  <p class="card-text">An off the grid retreat</p>
-                  <a href="#" class="btn btn-primary">Read More</a>
+          <div class="row d-flex justify-content-center">
+             <div class="col"> <!-- first row of project section - TITLE -->
+               <h2 class="text-center">
+                 Projects
+               </h2>
+             </div>
+          </div>
+
+          <div class="row d-flex justify-content-center"> <!-- second row of project section -->
+            <div class="col-12 d-flex justify-content-center">
+              <div class="card w-75 text-center card-1"> <!-- first card -->
+                <div class="card-body bg-card">
+                  <h3 class="card-title">Unplugged</h3>
+                  <p class="card-text">An off the grid retreat that will leave you feeling recharged</p>
+                  <a href="#" class="card-link"><span class="fas fa-long-arrow-alt-right"></span></a>
                 </div>
               </div>
             </div>
 
-            <div class="col-12 d-flex justify-content-center padding-vertical">
-              <div class="card w-75 text-center"> <!-- second card -->
-                <div class="card-body">
-                  <h5 class="card-title">Hometown News</h5>
-                  <p class="card-text">Stay on top of the local news with this website </p>
-                  <a href="#" class="btn btn-primary">Read More</a>
+            <div class="col-12 d-flex justify-content-center">
+              <div class="card w-75 text-center card-2"> <!-- second card -->
+                <div class="card-body bg-card">
+                  <h3 class="card-title">Hometown News</h3>
+                  <p class="card-text">Stay on top of the local news with this  responsive website</p>
+                  <a href="#" class="card-link"><span class="fas fa-long-arrow-alt-right"></span></a>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center"> <!-- second row of project section -->
-            <div class="col-12 d-flex justify-content-center padding-vertical">
-              <div class="card w-75 text-center"> <!-- third card -->
-                <div class="card-body">
-                  <h5 class="card-title pb-10">Election Map</h5>
-                  <p class="card-text">An interactive election map with instant results</p>
-                  <a href="#" class="btn btn-primary">Read More</a>
+            <div class="col-12 d-flex justify-content-center">
+              <div class="card w-75 text-center card-3"> <!-- third card -->
+                <div class="card-body bg-card">
+                  <h3 class="card-title pb-10">Election Map</h3>
+                  <p class="card-text">Interactive election map with instant results</p>
+                  <a href="#" class="card-link"><span class="fas fa-long-arrow-alt-right"></span></a>
                 </div>
               </div>
             </div>
 
-            <div class="col-12 d-flex justify-content-center padding-vertical">
-              <div class="card w-75 text-center"> <!-- fourth card -->
-                <div class="card-body">
-                  <h5 class="card-title">LOLCat Clock</h5>
+            <div class="col-12 d-flex justify-content-center">
+              <div class="card w-75 text-center card-4"> <!-- fourth card -->
+                <div class="card-body bg-card">
+                  <h3 class="card-title">LOLCat Clock</h3>
                   <p class="card-text">A cat themed clock with a changing message</p>
-                  <a href="#" class="btn btn-primary">Read More</a>
+                  <a href="#" class="card-link"><span class="fas fa-long-arrow-alt-right"></span></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!--<div class="row">
-            <div class="col padding text-center">
-              <a href="#" class="btn btn-primary">All Projects</a>
-            </div>
-          </div>-->
-
         </div>
       </section>
 
-      <section id="contact" class="row"> <!-- contact section begins -->
+      <footer id="contact" class="contact row"> <!-- contact section begins -->
         <div class="col">
           <div class="row d-flex justify-content-center"> <!-- first row of contact section -->
             <div class="col padding-vertical">
-              <h3 class="text-center">
+              <h2 class="text-center">
                 Let's Connect!
-              </h3>
+              </h2>
               <p class="text-center remove-margin">
                 I'd love to hear from you.
               </p>
             </div>
           </div>
           <div class="row d-flex justify-content-center"> <!-- second row of contact section -->
-            <div class="col-6 d-flex justify-content-between padding-bottom">
+            <div class="col-6 d-flex justify-content-between icons">
               <span class="fab fa-github"></span>
               <span class="fab fa-linkedin-in"></span>
               <span class="far fa-envelope"></span>
             </div>
           </div>
-        </div>
-      </section>
-
-      <footer>
-        <div class="row">
-          <div class="col">
-            <p class="text-center">
-              &copy; Copyright 2020 | Dayna Lashin
-            </p>
+          <div class="row d-flex justify-content-center"> <!-- third row of contact section -->
+            <div class="col">
+              <p class="text-center copyright">
+                &copy; Copyright 2020 | Dayna Lashin
+              </p>
+            </div>
           </div>
         </div>
-       </footer>
+      </footer>
 
 	  </main>
 
