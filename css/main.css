@@ -1,4 +1,5 @@
-/***** GLOBAL STYLES ******/
+/********** GLOBAL STYLES ***********/
+
 /* selects all elements and pseudo elements */
 *,
 *::before,
@@ -8,80 +9,100 @@
   padding: 0;
 }
 
-body {
+/*
+html {
   font-size: 16px;
 }
+*/
 
 /* Responsive image styles */
 img {
   width: 100%;
   border-radius: 50%;
+  border: 1px solid #4A6163 !important;
 }
 
 figure {
   margin: 0;
 }
 
-h2, h3, h5, p {
-  font-family: 'Lato', sans-serif;
-}
 
-/***** MOBILE HEADER STYLES *****/
+/******************** MOBILE STYLES *********************/
+
+/***** HEADER STYLES *****/
+
 header {
   position: relative;
+  font-size: 16px;
 }
 
-.container-fluid {
-  padding: 0 !important;
+header .container-fluid {
+  padding: 0 !important; /* overrides boostrap */
 }
 
 nav {
   position: absolute;
-  top: 15px;
-  z-index: 300; /* Stacks in front of particle div */
+  z-index: 300; /* stacks in front of particle div */
+  height: 10vh; /* 10% of viewport height */
+  background-color: #4A6163 !important; /* overrides boostrap*/
 }
 
-.fas, .fa-bars {
-  color: #C80428;
-  font-size: 30px;
+header .fas, .fa-bars {
+  color: #F9FAF4;
+}
+
+button.navbar-toggler {
+  font-size: 1.75rem; /* 28px */
+  padding-right: 10px;
+}
+
+a.nav-link {
+  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+  padding: 4px 0;
+  color: #4A6163;
 }
 
 .hero,
 .particles {
-  position: relative;
   width: 100%;
-}
-
-.hero {
-  height: 60vh;  /*40% of viewport height to line up with particles div */
-  position: relative;
-  z-index: 100; /* Stacks behind particle div and navbar */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.title {
-  font-family: 'Dancing Script', cursive; /* Overrides bootstrap font */
-  font-size: 36px;
-  font-weight: 400;
-  color: #2A1E5C;
-  padding: 15px 10px;
-  border-radius: 5px;
-  width: 100%;
-  text-align: center;
 }
 
 .particles {
   position: absolute;
-  top: 0;
-  height: 65vh; /* 50% of viewport height */
+  top: 0; /* positions it to the top of the page */
+  height: 70vh; /* 70% of viewport height */
   z-index: 200; /* Stacks in front of main section and behind navbar */
   transform-style: preserve-3d;
   overflow: hidden;
   cursor: pointer;
 }
 
+.hero {
+  height: 60vh;  /* 60% of viewport height to line up with particles div */
+  position: relative;
+  z-index: 100; /* Stacks behind particle div and navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F9FAF4;
+}
+
+.content-wrapper {
+  width: 50%;
+}
+
+.title {
+  font-family: 'Nunito Sans', sans-serif; /* Overrides bootstrap font */
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  color: #4A6163;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+/* particle animation */
 @keyframes move {
   0% {
     transform: translateY(0);
@@ -99,33 +120,141 @@ nav {
 }
 
 
+
 /***** MAIN SECTION STYLES *****/
+
 main {
-  position: relative;
-  margin: 0 25px;
+  position: relative; /* keeps the container from overlapping with header */
 }
+
 
 
 /***** ABOUT SECTION STYLES *****/
 
+.about {
+  background-color: #F9FAF4;
+  padding-bottom: 20px;
+}
+
 figure {
-  width: 50%;
+  width: 45%;
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
-.padding-vertical {
-  padding: 25px 0;
+.about h3, .about p {
+  color: #4A6163;
 }
 
-.padding-bottom {
+.about h3 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5em; /* 24px */
+  font-weight: 600;
+}
+
+.about p {
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 15px;
+  font-size: 1em; /* 16px */
+  line-height: 1.5em; /*24px*/
+}
+
+.about .icons {
   padding-bottom: 40px;
+  font-size: 1.25em; /* 20px */
+  color: #4A6163;
+}
+
+.divider {
+  border-bottom: 1px solid rgba(74,97,99,0.1); /* same color as #4A6163 */
+  padding-top: 20px;
 }
 
 
-/***** PROJECT SECTION STYLES *****/
-#projects {
-  background-color: #FFFFFF;
+
+/***** PROJECTS SECTION STYLES *****/
+
+.projects {
+  background-color: #F9FAF4;
 }
 
-.remove-margin {
-  margin-bottom: 0 !important;
+.projects .fas,
+.fa-long-arrow-alt-right {
+  color: #4A6163;
+  font-size: 1.75em; /* 32px */
 }
+
+.projects h2 {
+  padding: 40px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em; /* 24px */
+  color: #4A6163;
+}
+
+.projects h3 {
+  color: #4A6163;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5em; /* 24px */
+  font-weight: 600;
+}
+
+p.card-text {
+  font-family: 'Lato', sans-serif;
+  color: #4A6163;
+  font-size: 1em;
+}
+
+.bg-card {
+  background-color: #F9FAF4;
+  border-radius: 5px;
+}
+
+.card-1, .card-2, .card-3 {
+  margin-bottom: 25px;
+}
+
+.card-4 {
+  margin-bottom: 40px;
+}
+
+
+
+/***** FOOTER SECTION STYLES *****/
+
+.contact {
+  background-color: #4A6163;
+  margin: 0;
+}
+
+.contact h2, .contact p {
+  color: #F9FAF4;
+}
+
+.contact h2 {
+  font-size: 1.5em; /* 24px */
+  padding-top: 40px;
+}
+
+.contact p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em; /* 16px */
+}
+
+footer .icons {
+  padding-top: 15px;
+  padding-bottom: 50px;
+  color: #F9FAF4;
+}
+
+p.copyright {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75em;/* 12px */
+  padding-top: 20px;
+}
+
+
+
+/******************** TABLET STYLES *********************/
+
+/******************** DESKTOP STYLES *********************/
