@@ -1,6 +1,6 @@
 var particles = document.getElementById("particles");// getting at the particles div in html
 var border = ["50%","0%"]; // array for the type of shape, 50% is circle and 0% is square
-var colors = ["#C80428","#ECD444","#F86624"]; // array for the color of the shape
+var colors = ["#F9A66C","#FFC94B","#F17A7E"]; // array for the color of the shape
 
 function createParticle(event){
     var x = event.clientX; // x coordinate of mouse click
