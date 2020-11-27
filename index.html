@@ -24,44 +24,44 @@
 
   <body>
     <header>
-      <!--Bootstrap nav with mobile view collapse-->
+      <!-- Bootstrap nav with mobile view collapse and font awesome icon -->
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-md align-items-center">
-          <button class="btn navbar-toggler shadow-none border-0 ml-auto" data-toggle="collapse" data-target="#navbar-toggler" type="button">
+        <nav class="navbar navbar-expand-md align-items-start">
+          <button class="btn navbar-toggler shadow-none border-0" data-toggle="collapse" data-target="#navbar-toggler" type="button">
             <span class="fas fa-bars"></span>
           </button>
-          <div class="collapse navbar-collapse ml-auto" id="navbar-toggler">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item ml-auto">
+          <div class="collapse navbar-collapse" id="navbar-toggler">
+            <ul class="navbar-nav">
+              <li class="nav-item">
                 <a class="nav-link" href="#about">about</a>
               </li>
-              <li class="nav-item ml-auto">
-                <a class="nav-link" href="#">projects</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">projects</a>
               </li>
-              <li class="nav-item ml-auto">
-                <a class="nav-link" href="#">contact</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">contact</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
 
-      <!--Hero section-->
+      <!-- hero section -->
       <div class="hero">
         <div class="content-wrapper">
           <h1 class="title">Dayna Lashin</h1>
         </div>
       </div>
 
-      <!--Floating shapes section-->
+      <!--Floating particles section-->
       <div class="particles" id="particles"></div>
     </header>
 
+
     <main class="container-fluid">
-
-      <section id="about" class="about row d-flex justify-content-center"><!-- about section begins -->
+      <!-- about section -->
+      <section id="about" class="about row d-flex justify-content-center">
         <div class="col">
-
           <div class="row"> <!-- first row of about section -->
             <div class="col-12 d-flex justify-content-center">
               <figure>
@@ -69,7 +69,6 @@
               </figure>
             </div>
           </div>
-
           <div class="row d-flex justify-content-center"> <!-- second row of about section -->
             <div class="col-10">
               <h3 class="text-center">Hi, I'm Dayna.</h3>
@@ -77,12 +76,18 @@
                 I'm a Front End Developer based in New York. I work in HTML, CSS, and JavaScript. You can find some of my projects below.
               </p>
             </div>
-            <div class="col-6 d-flex justify-content-between icons">
-              <span class="fab fa-github"></span>
-              <span class="fab fa-linkedin-in"></span>
-              <span class="far fa-envelope"></span>
+            <div class="col-6 d-flex justify-content-around icons">
+              <a href="https://github.com/Dayna-Lashin" target="_blank">
+                <span class="fab fa-github"></span>
+              </a>
+              <a href="https://www.linkedin.com/in/daynalashin/" target="_blank">
+                <span class="fab fa-linkedin-in"></span>
+              </a>
+              <a href="mailto:dayna.lashin@gmail.com" target="_blank">
+                <span class="far fa-envelope"></span>
+              </a>
             </div>
-            <div class="col-8">
+            <div class="col-10">
               <div class="divider"></div>
             </div>
           </div>
@@ -90,11 +95,11 @@
         </div>
       </section>
 
-      <section id="projects" class="projects row"> <!-- projects section begins -->
+       <!-- projects section begins -->
+      <section id="projects" class="projects row">
         <div class="col">
-
-          <div class="row d-flex justify-content-center">
-             <div class="col"> <!-- first row of project section - TITLE -->
+          <div class="row d-flex justify-content-center"> <!-- first row of project section -->
+             <div class="col">
                <h2 class="text-center">
                  Projects
                </h2>
@@ -106,8 +111,10 @@
               <div class="card w-75 text-center card-1"> <!-- first card -->
                 <div class="card-body bg-card">
                   <h3 class="card-title">Unplugged</h3>
-                  <p class="card-text">An off the grid retreat that will leave you feeling recharged</p>
-                  <a href="#" class="card-link"><span class="fas fa-long-arrow-alt-right"></span></a>
+                  <p class="card-text">An off the grid retreat</p>
+                  <a href="#" class="card-link">
+                    <span class="fas fa-long-arrow-alt-right"></span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -116,8 +123,10 @@
               <div class="card w-75 text-center card-2"> <!-- second card -->
                 <div class="card-body bg-card">
                   <h3 class="card-title">Hometown News</h3>
-                  <p class="card-text">Stay on top of the local news with this  responsive website</p>
-                  <a href="#" class="card-link"><span class="fas fa-long-arrow-alt-right"></span></a>
+                  <p class="card-text">Stay on top of the local news</p>
+                  <a href="#" class="card-link">
+                    <span class="fas fa-long-arrow-alt-right"></span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -128,8 +137,10 @@
               <div class="card w-75 text-center card-3"> <!-- third card -->
                 <div class="card-body bg-card">
                   <h3 class="card-title pb-10">Election Map</h3>
-                  <p class="card-text">Interactive election map with instant results</p>
-                  <a href="#" class="card-link"><span class="fas fa-long-arrow-alt-right"></span></a>
+                  <p class="card-text">Interactive election map</p>
+                  <a href="#" class="card-link">
+                    <span class="fas fa-long-arrow-alt-right"></span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -138,8 +149,10 @@
               <div class="card w-75 text-center card-4"> <!-- fourth card -->
                 <div class="card-body bg-card">
                   <h3 class="card-title">LOLCat Clock</h3>
-                  <p class="card-text">A cat themed clock with a changing message</p>
-                  <a href="#" class="card-link"><span class="fas fa-long-arrow-alt-right"></span></a>
+                  <p class="card-text">Cat themed clock with a changing message</p>
+                  <a href="#" class="card-link">
+                    <span class="fas fa-long-arrow-alt-right"></span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -151,7 +164,7 @@
       <footer id="contact" class="contact row"> <!-- contact section begins -->
         <div class="col">
           <div class="row d-flex justify-content-center"> <!-- first row of contact section -->
-            <div class="col padding-vertical">
+            <div class="col-8">
               <h2 class="text-center">
                 Let's Connect!
               </h2>
@@ -161,10 +174,16 @@
             </div>
           </div>
           <div class="row d-flex justify-content-center"> <!-- second row of contact section -->
-            <div class="col-6 d-flex justify-content-between icons">
-              <span class="fab fa-github"></span>
-              <span class="fab fa-linkedin-in"></span>
-              <span class="far fa-envelope"></span>
+            <div class="col-6 d-flex justify-content-around icons">
+              <a href="https://github.com/Dayna-Lashin" target="_blank">
+                <span class="fab fa-github"></span>
+              </a>
+              <a href="https://www.linkedin.com/in/daynalashin/" target="_blank">
+                <span class="fab fa-linkedin-in"></span>
+              </a>
+              <a href="mailto:dayna.lashin@gmail.com" target="_blank">
+                <span class="far fa-envelope"></span>
+              </a>
             </div>
           </div>
           <div class="row d-flex justify-content-center"> <!-- third row of contact section -->

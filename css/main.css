@@ -9,12 +9,6 @@
   padding: 0;
 }
 
-/*
-html {
-  font-size: 16px;
-}
-*/
-
 /* Responsive image styles */
 img {
   width: 100%;
@@ -26,6 +20,16 @@ figure {
   margin: 0;
 }
 
+p,
+a.nav-link {
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Nunito Sans', sans-serif;
+}
 
 /******************** MOBILE STYLES *********************/
 
@@ -44,27 +48,32 @@ nav {
   position: absolute;
   z-index: 300; /* stacks in front of particle div */
   height: 10vh; /* 10% of viewport height */
-  background-color: #4A6163 !important; /* overrides boostrap*/
+  background-color: #F9FAF4 !important; /* overrides boostrap*/
+}
+
+/* font awesome used for nav bar icon*/
+button.navbar-toggler {
+  font-size: 1.75rem; /* 28px */
+  padding-right: 15px;
+  padding-bottom: 10px !important;
+  padding-top: 10px;
 }
 
 header .fas, .fa-bars {
-  color: #F9FAF4;
-}
-
-button.navbar-toggler {
-  font-size: 1.75rem; /* 28px */
-  padding-right: 10px;
-}
-
-a.nav-link {
-  font-size: 1em;
-  font-family: 'Lato', sans-serif;
-  padding: 4px 0;
   color: #4A6163;
 }
 
-.hero,
-.particles {
+ul.navbar-nav {
+  padding-left: 10px; /* lines up drop-down items with toggler */
+}
+
+a.nav-link {
+  font-size: 1em; /* 16px */
+  padding: 4px 0; /* for vertical spacing in dropdown */
+  color: #4A6163;
+}
+
+.particles, .hero {
   width: 100%;
 }
 
@@ -93,7 +102,6 @@ a.nav-link {
 }
 
 .title {
-  font-family: 'Nunito Sans', sans-serif; /* Overrides bootstrap font */
   font-size: 2.25rem; /* 36px */
   font-weight: 700;
   color: #4A6163;
@@ -134,12 +142,17 @@ main {
 .about {
   background-color: #F9FAF4;
   padding-bottom: 20px;
+  font-size: 16px; /* root font size for ems */
+}
+
+.about a {
+  color: #4A6163 !important;
 }
 
 figure {
-  width: 45%;
+  width: 50%;
   margin: 0;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 10px;
 }
 
@@ -148,16 +161,14 @@ figure {
 }
 
 .about h3 {
-  font-family: 'Nunito Sans', sans-serif;
   font-size: 1.5em; /* 24px */
   font-weight: 600;
 }
 
 .about p {
-  font-family: 'Lato', sans-serif;
   padding-bottom: 15px;
   font-size: 1em; /* 16px */
-  line-height: 1.5em; /*24px*/
+  line-height: 1.5em; /* 24px */
 }
 
 .about .icons {
@@ -167,7 +178,7 @@ figure {
 }
 
 .divider {
-  border-bottom: 1px solid rgba(74,97,99,0.1); /* same color as #4A6163 */
+  border-bottom: 1px solid rgba(74,97,99,0.3); /* same color as #4A6163 */
   padding-top: 20px;
 }
 
@@ -177,37 +188,15 @@ figure {
 
 .projects {
   background-color: #F9FAF4;
-}
-
-.projects .fas,
-.fa-long-arrow-alt-right {
-  color: #4A6163;
-  font-size: 1.75em; /* 32px */
+  font-size: 16px; /* root font size for ems */
 }
 
 .projects h2 {
-  padding: 40px 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5em; /* 24px */
-  color: #4A6163;
-}
-
-.projects h3 {
-  color: #4A6163;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.5em; /* 24px */
+  padding-top: 40px;
+  padding-bottom: 15px;
+  font-size: 1.75em; /* 28px */
   font-weight: 600;
-}
-
-p.card-text {
-  font-family: 'Lato', sans-serif;
   color: #4A6163;
-  font-size: 1em;
-}
-
-.bg-card {
-  background-color: #F9FAF4;
-  border-radius: 5px;
 }
 
 .card-1, .card-2, .card-3 {
@@ -218,6 +207,32 @@ p.card-text {
   margin-bottom: 40px;
 }
 
+.bg-card {
+  background-color: #F9FAF4;
+  border-radius: 5px;
+}
+
+.card {
+  border: 1px solid rgba(74,97,99,0.3) !important;
+}
+
+.projects h3 {
+  color: #4A6163;
+  font-size: 1.5em; /* 24px */
+  font-weight: 600;
+}
+
+p.card-text {
+  color: #4A6163;
+  font-size: 1em;
+}
+
+.projects .fas,
+.fa-long-arrow-alt-right {
+  color: #4A6163;
+  font-size: 2em; /* 32px */
+}
+
 
 
 /***** FOOTER SECTION STYLES *****/
@@ -225,6 +240,7 @@ p.card-text {
 .contact {
   background-color: #4A6163;
   margin: 0;
+  font-size: 16px; /* root font size for ems */
 }
 
 .contact h2, .contact p {
@@ -232,24 +248,27 @@ p.card-text {
 }
 
 .contact h2 {
-  font-size: 1.5em; /* 24px */
   padding-top: 40px;
+  font-size: 1.75em; /* 28px */
+  font-weight: 600;
 }
 
 .contact p {
-  font-family: 'Lato', sans-serif;
   font-size: 1em; /* 16px */
 }
 
-footer .icons {
+.contact .icons {
   padding-top: 15px;
   padding-bottom: 50px;
-  color: #F9FAF4;
+  font-size: 1.25em; /* 20px */
+}
+
+.contact a {
+  color: #F9FAF4 !important;
 }
 
 p.copyright {
-  font-family: 'Lato', sans-serif;
-  font-size: 0.75em;/* 12px */
+  font-size: 0.625em;/* 10px */
   padding-top: 20px;
 }
 
