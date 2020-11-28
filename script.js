@@ -1,11 +1,11 @@
 var particles = document.getElementById("particles");// getting at the particles div in html
 var border = ["50%","0%"]; // array for the type of shape, 50% is circle and 0% is square
-var colors = ["#F9A66C","#FFC94B","#F17A7E"]; // array for the color of the shape
+var colors = ["#88579E","#924BB3","#D8A5F0","#EAD8F2"]; // array for the color of the shape
 
 function createParticle(event){
     var x = event.clientX; // x coordinate of mouse click
     var y = event.clientY; // y coordinate of mouse click
-    var color = Math.floor(Math.random() * 3); // sets color to random number 0-3 rounded down to nearest whole integer
+    var color = Math.floor(Math.random() * 4); // sets color to random number 0-3 rounded down to nearest whole integer
 
     var div = document.createElement("div"); // create a new div element
     div.style.position = "absolute"; // gives div a position of absolute
@@ -31,6 +31,7 @@ function getParticles(){
     var np = document.documentElement.clientWidth / 40; // divides viewable HTML element width by 40 which affects how many particles there are
     particles.innerHTML = ""; // sets particle HTML content as empty string
     for (var i = 0; i < np; i++) { // FOR LOOP starting at 0 increasing by 1 for as long as i is less than the number of new particles run the below
+
         var w = document.documentElement.clientWidth; // get viewable HTML element width set to w
         var h = document.documentElement.clientHeight; // get viewable HTML element height set to h
         var rndw = Math.floor(Math.random() * w ) + 1; // random number bewteen 0 - viewable width rounded down to nearest whole integer plus 1 - where appears on screen x axis
@@ -39,7 +40,7 @@ function getParticles(){
         var opty = Math.floor(Math.random() * 4) + 1; // random number between 0-4 rounded down to nearest whole integer +1
         var anima = Math.floor(Math.random() * 12) + 8; // random number between 0-12 rounded down to nearest whole integer +8
         var bdr = Math.floor(Math.random() * 2); // random number between 0-2 rounded down to nearest whole integer (2 because there are 2 border options in array)
-        var color = Math.floor(Math.random() * 3); // random number between 0-3 rounded down to nearest whole integer (3 because there are 3 colors in array)
+        var color = Math.floor(Math.random() * 4); // random number between 0-3 rounded down to nearest whole integer
 
         var div = document.createElement("div"); // creates a div element
         div.style.position = "absolute"; // gives div a position of absolute
