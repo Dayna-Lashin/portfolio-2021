@@ -27,7 +27,7 @@
       <!-- Bootstrap nav with mobile view collapse and font awesome icon -->
       <div class="container-fluid">
         <nav class="navbar navbar-expand-md align-items-start">
-          <button class="btn navbar-toggler shadow-none border-0" data-toggle="collapse" data-target="#navbar-toggler" type="button">
+          <button class="navbar-toggler btn shadow-none border-0" data-toggle="collapse" data-target="#navbar-toggler" type="button">
             <span class="fas fa-bars"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbar-toggler">
@@ -45,61 +45,73 @@
           </div>
         </nav>
       </div>
-
       <!-- hero section -->
       <div class="hero">
         <div class="content-wrapper">
           <h1 class="title">Dayna Lashin</h1>
         </div>
       </div>
-
       <!--Floating particles section-->
       <div class="particles" id="particles"></div>
     </header>
 
+    <main class="container-fluid"> <!-- bootstrap grid container -->
 
-    <main class="container-fluid">
       <!-- about section -->
-      <section id="about" class="about row d-flex justify-content-center">
+      <section id="about" class="about row">
         <div class="col">
-          <div class="row"> <!-- first row of about section -->
-            <div class="col-12 d-flex justify-content-center">
+          <div class="row d-flex align-items-center"> <!-- image, intro, icons -->
+            <!-- column 1 -->
+            <div class="col-12 col-md-5 col-lg-4 d-flex justify-content-center justify-content-md-end">
               <figure>
                 <img src="img/website-headshot.jpg" alt="Dayna Lashin headshot">
               </figure>
             </div>
-          </div>
-          <div class="row d-flex justify-content-center"> <!-- second row of about section -->
-            <div class="col-10">
-              <h3 class="text-center">Hi, I'm Dayna.</h3>
-              <p class="text-center">
-                I'm a Front End Developer based in New York. I work in HTML, CSS, and JavaScript. You can find some of my projects below.
-              </p>
+
+            <!-- column 2 -->
+            <div class="col-12 col-md-7 col-lg-8">
+              <div class="row d-flex justify-content-center justify-content-md-start">
+                <div class="col-10">
+                  <h3 class="text-center text-md-left">
+                    Hi, I'm Dayna.
+                  </h3>
+                  <p class="text-center text-md-left">
+                    I'm a Music Industry Professional turned Front End Developer based in New York. You can find some of my latest projects below. Technologies I'm familiar with are <span>HTML, CSS, Bootstrap, Sass, JavaScript, jQuery, and React.</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row d-flex justify-content-center justify-content-md-start">
+                <div class="col-6 col-md-4 d-flex justify-content-between">
+                  <a href="https://github.com/Dayna-Lashin" target="_blank">
+                    <span class="fab fa-github"></span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/daynalashin/" target="_blank">
+                    <span class="fab fa-linkedin-in"></span>
+                  </a>
+                  <a href="mailto:dayna.lashin@gmail.com" target="_blank">
+                    <span class="far fa-envelope"></span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="col-6 d-flex justify-content-around icons">
-              <a href="https://github.com/Dayna-Lashin" target="_blank">
-                <span class="fab fa-github"></span>
-              </a>
-              <a href="https://www.linkedin.com/in/daynalashin/" target="_blank">
-                <span class="fab fa-linkedin-in"></span>
-              </a>
-              <a href="mailto:dayna.lashin@gmail.com" target="_blank">
-                <span class="far fa-envelope"></span>
-              </a>
-            </div>
+
+          </div> <!-- end of first row -->
+
+          <div class="row d-flex justify-content-center"> <!-- divider section -->
             <div class="col-10">
               <div class="divider"></div>
             </div>
-          </div>
-          </div>
+          </div> <!-- end of second row -->
+
         </div>
       </section>
 
-       <!-- projects section begins -->
+      <!-- projects section -->
       <section id="projects" class="projects row">
         <div class="col">
           <div class="row d-flex justify-content-center"> <!-- first row of project section -->
-             <div class="col">
+             <div class="col-12">
                <h2 class="text-center">
                  Projects
                </h2>
@@ -107,7 +119,7 @@
           </div>
 
           <div class="row d-flex justify-content-center"> <!-- second row of project section -->
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
               <div class="card w-75 text-center card-1"> <!-- first card -->
                 <div class="card-body bg-card">
                   <h3 class="card-title">Unplugged</h3>
@@ -119,7 +131,7 @@
               </div>
             </div>
 
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
               <div class="card w-75 text-center card-2"> <!-- second card -->
                 <div class="card-body bg-card">
                   <h3 class="card-title">Hometown News</h3>
@@ -133,11 +145,11 @@
           </div>
 
           <div class="row d-flex justify-content-center"> <!-- second row of project section -->
-            <div class="col-12 d-flex justify-content-center">
-              <div class="card w-75 text-center card-3"> <!-- third card -->
+            <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+              <div class="card w-75 w-md-100 text-center card-3"> <!-- third card -->
                 <div class="card-body bg-card">
-                  <h3 class="card-title pb-10">Election Map</h3>
-                  <p class="card-text">Interactive election map</p>
+                  <h3 class="card-title">Election Map</h3>
+                  <p class="card-text">An interactive election map</p>
                   <a href="#" class="card-link">
                     <span class="fas fa-long-arrow-alt-right"></span>
                   </a>
@@ -145,7 +157,7 @@
               </div>
             </div>
 
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
               <div class="card w-75 text-center card-4"> <!-- fourth card -->
                 <div class="card-body bg-card">
                   <h3 class="card-title">LOLCat Clock</h3>
@@ -161,32 +173,50 @@
         </div>
       </section>
 
-      <footer id="contact" class="contact row"> <!-- contact section begins -->
+      <!-- contact section -->
+      <footer id="contact" class="contact row">
         <div class="col">
-          <div class="row d-flex justify-content-center"> <!-- first row of contact section -->
-            <div class="col-8">
-              <h2 class="text-center">
-                Let's Connect!
-              </h2>
-              <p class="text-center remove-margin">
-                I'd love to hear from you.
-              </p>
+
+          <div class="row d-flex justify-content-center">
+
+            <div class="col-12 col-md-6">
+              <div class="row">
+                <div class="col">
+                  <h3 class="text-center">
+                    Let's Connect
+                  </h3>
+                </div>
+              </div>
+              <div class="row d-flex justify-content-center">
+                <div class="col-6 d-flex justify-content-around">
+                  <a href="https://github.com/Dayna-Lashin" target="_blank">
+                    <span class="fab fa-github"></span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/daynalashin/" target="_blank">
+                    <span class="fab fa-linkedin-in"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="row">
+                <div class="col">
+                  <h3 class="text-center">
+                    Email Me
+                  </h3>
+                </div>
+              </div>
+              <div class="row d-flex justify-content-center">
+                <div class="col d-flex justify-content-center">
+                  <a href="mailto:dayna.lashin@gmail.com" target="_blank">
+                    <span class="far fa-envelope">dayna.lashin@gmail.com</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="row d-flex justify-content-center"> <!-- second row of contact section -->
-            <div class="col-6 d-flex justify-content-around icons">
-              <a href="https://github.com/Dayna-Lashin" target="_blank">
-                <span class="fab fa-github"></span>
-              </a>
-              <a href="https://www.linkedin.com/in/daynalashin/" target="_blank">
-                <span class="fab fa-linkedin-in"></span>
-              </a>
-              <a href="mailto:dayna.lashin@gmail.com" target="_blank">
-                <span class="far fa-envelope"></span>
-              </a>
-            </div>
-          </div>
-          <div class="row d-flex justify-content-center"> <!-- third row of contact section -->
+          <div class="row">
             <div class="col">
               <p class="text-center copyright">
                 &copy; Copyright 2020 | Dayna Lashin
