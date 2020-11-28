@@ -21,7 +21,8 @@ figure {
 }
 
 p,
-a.nav-link {
+a.nav-link,
+a.email {
   font-family: 'Lato', sans-serif;
 }
 
@@ -176,7 +177,7 @@ figure {
   color: #88579E; /* overrides boostrap */
 }
 
-.divider {
+.about .divider {
   border-bottom: 1px solid rgba(32,2,46,0.5) !important; /* #20022E */
   padding-top: 75px;
 }
@@ -237,35 +238,39 @@ p.card-text {
   font-size: 16px; /* root font size for ems */
 }
 
-.contact h3 {
+.contact h2 {
   color: #20022E;
-  padding-top: 30px;
-  font-size: 1.5em; /* 24px */
+  padding-top: 50px;
+  font-size: 1.75em; /* 28px */
+  font-weight: 600;
+  margin: 0 !important;
+}
+
+.contact p {
+  font-size: 1em;
+  color: #20022E;
   font-weight: 600;
 }
 
+.contact .divider {
+  border-bottom: 1px solid rgba(32,2,46,0.5) !important; /* #20022E */
+}
 
-/****** LEFT OFF HERE 11/28 ******/
-
-/*.contact p {
-  font-size: 1em; /* 16px */
-  /*color: #20022E;
-  font-weight: 600;
-}*/
-
-/*.contact span.fab.fa-github,
-.contact span.fab.fa-linkedin-in,
-.contact span.far.fa-envelope {
+.contact a span.fab.fa-github,
+.contact a span.fab.fa-linkedin-in,
+.contact a span.far.fa-envelope {
   color: #20022E !important;
-  padding-top: 15px;
-  padding-bottom: 50px;
-  font-size: 1.25em; /* 20px */
-/*}*/
+  font-size: 1.375em; /* 22px */
+  margin-top: 16px;
+  padding-bottom: 75px;
+
+}
 
 p.copyright {
   font-size: 0.625em; /* 10px */
-  padding-top: 20px;
+  padding: 0;
   margin: 0;
+
 }
 
 
