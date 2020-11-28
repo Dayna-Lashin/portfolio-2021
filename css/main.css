@@ -13,7 +13,7 @@
 img {
   width: 100%;
   border-radius: 50%;
-  border: 1px solid #4A6163 !important;
+  border: 1px solid #20022E !important; /* overrides bootstrap */
 }
 
 figure {
@@ -31,13 +31,15 @@ h3 {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+
+
 /******************** MOBILE STYLES *********************/
 
 /***** HEADER STYLES *****/
 
 header {
   position: relative;
-  font-size: 16px;
+  font-size: 16px; /* base font size for ems */
 }
 
 header .container-fluid {
@@ -46,34 +48,33 @@ header .container-fluid {
 
 nav {
   position: absolute;
-  z-index: 300; /* stacks in front of particle div */
+  z-index: 300; /* stacks in front of particles and hero divs */
   height: 10vh; /* 10% of viewport height */
-  background-color: #F9FAF4 !important; /* overrides boostrap*/
+  background-color: #FFFFFF !important; /* overrides boostrap */
 }
 
-/* font awesome used for nav bar icon*/
+/* font awesome used for nav bar icon */
 button.navbar-toggler {
-  font-size: 1.75rem; /* 28px */
-  padding-right: 15px;
-  padding-bottom: 10px !important;
-  padding-top: 10px;
+  font-size: 1.75em; /* 28px */
+  padding: 8px 16px 0px 8px !important; /*overrides boostrap */
 }
 
-header .fas, .fa-bars {
-  color: #4A6163;
+header span.fas.fa-bars {
+  color: #88579E;
 }
 
 ul.navbar-nav {
-  padding-left: 10px; /* lines up drop-down items with toggler */
+  padding-left: 8px; /* lines up drop-down nav links with toggler icon */
 }
 
 a.nav-link {
   font-size: 1em; /* 16px */
   padding: 4px 0; /* for vertical spacing in dropdown */
-  color: #4A6163;
+  color: #88579E;
 }
 
-.particles, .hero {
+.particles,
+.hero {
   width: 100%;
 }
 
@@ -81,7 +82,7 @@ a.nav-link {
   position: absolute;
   top: 0; /* positions it to the top of the page */
   height: 70vh; /* 70% of viewport height */
-  z-index: 200; /* Stacks in front of main section and behind navbar */
+  z-index: 200; /* stacks in front of hero section and behind navbar */
   transform-style: preserve-3d;
   overflow: hidden;
   cursor: pointer;
@@ -90,22 +91,22 @@ a.nav-link {
 .hero {
   height: 60vh;  /* 60% of viewport height to line up with particles div */
   position: relative;
-  z-index: 100; /* Stacks behind particle div and navbar */
+  z-index: 100; /* stacks behind particle div and navbar */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F9FAF4;
+  background-color: #FFFFFF;
 }
 
-.content-wrapper {
+.hero .content-wrapper {
   width: 50%;
 }
 
 .title {
-  font-size: 2.25rem; /* 36px */
+  font-size: 2.25em; /* 36px */
   font-weight: 700;
-  color: #4A6163;
-  width: 100%;
+  color: #20022E;
+  width: 100%; /* full width of content wrapper */
   text-align: center;
   margin: 0;
 }
@@ -140,97 +141,90 @@ main {
 /***** ABOUT SECTION STYLES *****/
 
 .about {
-  background-color: #F9FAF4;
-  padding-bottom: 20px;
+  background-color: #FFFFFF;
   font-size: 16px; /* root font size for ems */
-}
-
-.about a {
-  color: #4A6163 !important;
 }
 
 figure {
   width: 50%;
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.about h3, .about p {
-  color: #4A6163;
+  margin: 0; /* overrides boostrap */
+  padding-top: 50px;
+  padding-bottom: 16px; /* 16px */
 }
 
 .about h3 {
   font-size: 1.5em; /* 24px */
   font-weight: 600;
+  color: #88579E;
 }
 
 .about p {
-  padding-bottom: 15px;
+  color: #20022E;
   font-size: 1em; /* 16px */
   line-height: 1.5em; /* 24px */
+  padding-bottom: 0.5em; /* 16px */
 }
 
-.about .icons {
-  padding-bottom: 40px;
+.about p span {
+  font-weight: 700;
+}
+
+.about span.fab.fa-github,
+.about span.fab.fa-linkedin-in,
+.about span.far.fa-envelope {
   font-size: 1.25em; /* 20px */
-  color: #4A6163;
+  color: #88579E; /* overrides boostrap */
 }
 
 .divider {
-  border-bottom: 1px solid rgba(74,97,99,0.3); /* same color as #4A6163 */
-  padding-top: 20px;
+  border-bottom: 1px solid rgba(32,2,46,0.5) !important; /* #20022E */
+  padding-top: 75px;
 }
-
 
 
 /***** PROJECTS SECTION STYLES *****/
 
 .projects {
-  background-color: #F9FAF4;
+  background-color: #FFFFFF;
   font-size: 16px; /* root font size for ems */
+  padding-bottom: 25px;
 }
 
 .projects h2 {
-  padding-top: 40px;
-  padding-bottom: 15px;
+  padding-top: 75px;
+  padding-bottom: 16px;
   font-size: 1.75em; /* 28px */
   font-weight: 600;
-  color: #4A6163;
-}
-
-.card-1, .card-2, .card-3 {
-  margin-bottom: 25px;
-}
-
-.card-4 {
-  margin-bottom: 40px;
-}
-
-.bg-card {
-  background-color: #F9FAF4;
-  border-radius: 5px;
+  color: #20022E;
 }
 
 .card {
-  border: 1px solid rgba(74,97,99,0.3) !important;
+  border: 1px solid rgba(32,2,46,0.5) !important; /* #20022E */
 }
 
-.projects h3 {
-  color: #4A6163;
+.bg-card {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.card-1, .card-2, .card-3, .card-4 {
+  margin-bottom: 50px;
+}
+
+h3.card-title {
+  color: #88579E;
   font-size: 1.5em; /* 24px */
   font-weight: 600;
 }
 
 p.card-text {
-  color: #4A6163;
+  color: #20022E;
   font-size: 1em;
 }
 
-.projects .fas,
-.fa-long-arrow-alt-right {
-  color: #4A6163;
-  font-size: 2em; /* 32px */
+.projects span.fas.fa-long-arrow-alt-right {
+  color: #88579E;
+  font-size: 2em;  /* 32px */
 }
 
 
@@ -238,38 +232,40 @@ p.card-text {
 /***** FOOTER SECTION STYLES *****/
 
 .contact {
-  background-color: #4A6163;
+  background-color: #EAD8F2;
   margin: 0;
   font-size: 16px; /* root font size for ems */
 }
 
-.contact h2, .contact p {
-  color: #F9FAF4;
-}
-
-.contact h2 {
-  padding-top: 40px;
-  font-size: 1.75em; /* 28px */
+.contact h3 {
+  color: #20022E;
+  padding-top: 30px;
+  font-size: 1.5em; /* 24px */
   font-weight: 600;
 }
 
-.contact p {
-  font-size: 1em; /* 16px */
-}
 
-.contact .icons {
+/****** LEFT OFF HERE 11/28 ******/
+
+/*.contact p {
+  font-size: 1em; /* 16px */
+  /*color: #20022E;
+  font-weight: 600;
+}*/
+
+/*.contact span.fab.fa-github,
+.contact span.fab.fa-linkedin-in,
+.contact span.far.fa-envelope {
+  color: #20022E !important;
   padding-top: 15px;
   padding-bottom: 50px;
   font-size: 1.25em; /* 20px */
-}
-
-.contact a {
-  color: #F9FAF4 !important;
-}
+/*}*/
 
 p.copyright {
-  font-size: 0.625em;/* 10px */
+  font-size: 0.625em; /* 10px */
   padding-top: 20px;
+  margin: 0;
 }
 
 
