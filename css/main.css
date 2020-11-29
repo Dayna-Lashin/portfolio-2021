@@ -57,7 +57,7 @@ nav {
 /* font awesome used for nav bar icon */
 button.navbar-toggler {
   font-size: 1.75em; /* 28px */
-  padding: 8px 16px 0px 8px !important; /*overrides boostrap */
+  padding: 8px 16px 0px 8px !important; /* overrides boostrap */
 }
 
 header span.fas.fa-bars {
@@ -144,12 +144,12 @@ main {
 .about {
   background-color: #FFFFFF;
   font-size: 16px; /* root font size for ems */
+  padding: 50px 0;
 }
 
 figure {
   width: 50%;
   margin: 0; /* overrides boostrap */
-  padding-top: 50px;
   padding-bottom: 16px; /* 16px */
 }
 
@@ -163,7 +163,7 @@ figure {
   color: #20022E;
   font-size: 1em; /* 16px */
   line-height: 1.5em; /* 24px */
-  padding-bottom: 0.5em; /* 16px */
+  padding-bottom: 16px;
 }
 
 .about p span {
@@ -177,8 +177,13 @@ figure {
   color: #88579E; /* overrides boostrap */
 }
 
-.about .divider {
-  border-bottom: 1px solid rgba(32,2,46,0.5) !important; /* #20022E */
+.about span.fab.fa-linkedin-in {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.divider {
+  border-bottom: 1px solid rgba(32,2,46,0.5) !important; /* #20022E - overrides Bootstrap */
   padding-top: 75px;
 }
 
@@ -188,11 +193,10 @@ figure {
 .projects {
   background-color: #FFFFFF;
   font-size: 16px; /* root font size for ems */
-  padding-bottom: 25px;
+  padding: 25px 0;
 }
 
 .projects h2 {
-  padding-top: 75px;
   padding-bottom: 16px;
   font-size: 1.75em; /* 28px */
   font-weight: 600;
@@ -200,7 +204,7 @@ figure {
 }
 
 .card {
-  border: 1px solid rgba(32,2,46,0.5) !important; /* #20022E */
+  border: 1px solid rgba(32,2,46,0.5) !important; /* #20022E - overrides Bootstrap */
 }
 
 .bg-card {
@@ -236,14 +240,14 @@ p.card-text {
   background-color: #EAD8F2;
   margin: 0;
   font-size: 16px; /* root font size for ems */
+  padding-top: 50px;
 }
 
 .contact h2 {
   color: #20022E;
-  padding-top: 50px;
   font-size: 1.75em; /* 28px */
   font-weight: 600;
-  margin: 0 !important;
+  margin: 0 !important; /* overrides Bootstrap */
 }
 
 .contact p {
@@ -252,29 +256,186 @@ p.card-text {
   font-weight: 600;
 }
 
-.contact .divider {
-  border-bottom: 1px solid rgba(32,2,46,0.5) !important; /* #20022E */
-}
-
 .contact a span.fab.fa-github,
 .contact a span.fab.fa-linkedin-in,
 .contact a span.far.fa-envelope {
-  color: #20022E !important;
+  color: #20022E !important; /* overrides Bootstrap */
   font-size: 1.375em; /* 22px */
   margin-top: 16px;
   padding-bottom: 75px;
-
 }
 
 p.copyright {
   font-size: 0.625em; /* 10px */
   padding: 0;
   margin: 0;
-
 }
+
+
 
 
 
 /******************** TABLET STYLES *********************/
 
+@media (min-width: 768px){
+
+  /***** HEADER STYLES *****/
+
+  ul.navbar-nav {
+    padding: 15px 0 0 15px;
+  }
+
+  .title {
+    font-size: 2.5em; /* 40px */
+  }
+
+
+
+  /***** ABOUT SECTION STYLES *****/
+
+  .about {
+    font-size: 18px; /* root font size for ems */
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  figure {
+    width: 80%;
+    padding: 0;
+    margin-bottom: 0 !important; /* overrides bootstrap */
+    padding: 15px 15px 0 0;
+  }
+
+  .about h3 {
+    padding: 8px 0;
+    margin-bottom: 0 !important; /* overrides bootstrap */
+  }
+
+  .about p {
+    margin-bottom: 0 !important; /* overrides bootstrap */
+    padding-bottom: 0;
+  }
+
+  .about span.fab.fa-github,
+  .about span.fab.fa-linkedin-in,
+  .about span.far.fa-envelope {
+    padding-top: 15px ;
+  }
+
+  .divider {
+    padding-top: 100px;
+  }
+
+
+
+  /***** PROJECTS SECTION STYLES *****/
+
+  .projects {
+    font-size: 18px; /* root font size for ems */
+    padding: 50px 0;
+  }
+
+  .projects h2 {
+    padding-bottom: 50px;
+  }
+
+
+
+  /***** FOOTER SECTION STYLES *****/
+
+  .contact {
+    font-size: 18px; /* root font size for ems */
+  }
+
+}
+
+
+
+
+
 /******************** DESKTOP STYLES *********************/
+
+@media (min-width: 1200px){
+
+  /***** HEADER STYLES *****/
+
+  header {
+    font-size: 18px; /* base font size for ems */
+  }
+
+  ul.navbar-nav {
+    padding: 20px 0 0 20px;
+  }
+
+  .title {
+    font-size: 2.75em; /* 50px */
+  }
+
+  /***** ABOUT SECTION STYLES *****/
+
+  .about {
+    font-size: 20px; /* root font size for ems */
+    padding-top: 125px;
+    padding-bottom: 75px;
+  }
+
+  figure {
+    width: 60%;
+    padding: 0;
+    margin-bottom: 0 !important;
+  }
+
+  .about h3 {
+    padding: 8px 0;
+    margin-bottom: 0 !important;
+  }
+
+  .about p {
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+  }
+
+  .about span.fab.fa-github,
+  .about span.fab.fa-linkedin-in,
+  .about span.far.fa-envelope {
+    padding-top: 20px ;
+  }
+
+  .divider {
+    padding-top: 125px;
+  }
+
+
+
+  /***** PROJECTS SECTION STYLES *****/
+
+  .projects {
+    font-size: 20px; /* root font size for ems */
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .projects h2 {
+    padding-bottom: 75px;
+  }
+
+  .card-1, .card-2, .card-3, .card-4 {
+    margin-bottom: 75px;
+  }
+
+
+
+  /***** FOOTER SECTION STYLES *****/
+
+  .contact {
+    font-size: 20px; /* root font size for ems */
+    padding-top: 75px;
+  }
+
+  .contact a span.fab.fa-github,
+  .contact a span.fab.fa-linkedin-in,
+  .contact a span.far.fa-envelope {
+    padding-bottom: 125px;
+  }
+
+}
