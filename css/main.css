@@ -1,440 +1,707 @@
-/********** GLOBAL STYLES ***********/
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
-/* selects all elements and pseudo elements */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* Responsive image styles */
-img {
-  width: 100%;
-  border-radius: 50%;
-  border: 1px solid #20022E !important; /* overrides bootstrap */
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
 }
 
-figure {
-  margin: 0 !important; /* overrides bootstrap */
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   /********** GLOBAL STYLES ***********/
+
+   /* selects all elements and pseudo elements */
+   *,
+   *::before,
+   *::after {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+
+   /* Responsive image styles */
+   img {
+     width: 100%;
+     border-radius: 50%;
+     border: 1px solid #20022E !important; /* overrides bootstrap */
+   }
+
+   figure {
+     margin: 0 !important; /* overrides bootstrap */
+   }
+
+   p,
+   a.nav-link,
+   a.email {
+     font-family: 'Lato', sans-serif;
+   }
+
+   h1,
+   h2,
+   h3 {
+     font-family: 'Nunito Sans', sans-serif;
+   }
+
+   .overflow-wrapper {
+     overflow-x: hidden;
+   }
+
+
+
+   /******************** MOBILE STYLES *********************/
+
+   /***** HEADER STYLES *****/
+
+   header {
+     position: relative;
+     font-size: 16px; /* base font size for ems */
+   }
+
+   header .container-fluid {
+     padding: 0 !important; /* overrides boostrap */
+   }
+
+   nav {
+     position: absolute;
+     z-index: 300; /* stacks in front of particles and hero divs */
+     height: 10vh; /* 10% of viewport height */
+     background-color: #FFFFFF !important; /* overrides boostrap */
+   }
+
+   /* font awesome used for nav bar icon */
+   button.navbar-toggler {
+     font-size: 1.75em; /* 28px */
+     padding: 8px 16px 0px 8px !important; /* overrides boostrap */
+   }
+
+   header span.fas.fa-bars {
+     color: #88579E;
+   }
+
+   ul.navbar-nav {
+     padding-left: 8px; /* lines up drop-down nav links with toggler icon */
+   }
+
+   a.nav-link {
+     font-size: 1em; /* 16px */
+     padding: 4px 0; /* for vertical spacing in dropdown */
+     color: #88579E;
+   }
+
+   .particles,
+   .hero {
+     width: 100%;
+   }
+
+   .particles {
+     position: absolute;
+     top: 0; /* positions it to the top of the page */
+     height: 70vh; /* 70% of viewport height */
+     z-index: 200; /* stacks in front of hero section and behind navbar */
+     transform-style: preserve-3d;
+     overflow: hidden;
+     cursor: pointer;
+   }
+
+   .hero {
+     height: 60vh;  /* 60% of viewport height to line up with particles div */
+     position: relative;
+     z-index: 100; /* stacks behind particle div and navbar */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #FFFFFF;
+   }
+
+   .hero .content-wrapper {
+     width: 50%;
+   }
+
+   .title {
+     font-size: 2.25em; /* 36px */
+     font-weight: 700;
+     color: #20022E;
+     width: 100%; /* full width of content wrapper */
+     text-align: center;
+     margin: 0;
+   }
+
+   /* particle animation */
+   @keyframes move {
+     0% {
+       transform: translateY(0);
+       opacity: 0;
+     }
+
+     10% ,90% {
+       opacity: 1;
+     }
+
+     100% {
+       transform: translateY(45vw);
+       opacity: 0;
+     }
+   }
+
+
+
+   /***** MAIN SECTION STYLES *****/
+
+   main {
+     position: relative; /* keeps the container from overlapping with header */
+   }
+
+
+
+   /***** ABOUT SECTION STYLES *****/
+
+   .about {
+     background-color: #FFFFFF;
+     font-size: 16px; /* root font size for ems */
+     padding: 50px 0;
+   }
+
+   figure {
+     max-width: 175px;
+     padding-bottom: 16px; /* 16px */
+   }
+
+   .about h3 {
+     font-size: 1.5em; /* 24px */
+     font-weight: 600;
+     color: #88579E;
+   }
+
+   .about p {
+     color: #20022E;
+     font-size: 1em; /* 16px */
+     line-height: 1.5em; /* 24px */
+     padding-bottom: 16px;
+   }
+
+   .about p span {
+     font-weight: 700;
+   }
+
+   .about span.fab.fa-github,
+   .about span.fab.fa-linkedin-in,
+   .about span.far.fa-envelope {
+     font-size: 1.25em; /* 20px */
+     color: #88579E; /* overrides boostrap */
+   }
+
+   .about span.fab.fa-linkedin-in {
+     padding-left: 30px;
+     padding-right: 30px;
+   }
+
+   .divider {
+     border-bottom: 1px solid rgba(32,2,46,0.5) !important; /* #20022E - overrides Bootstrap */
+     padding-top: 75px;
+   }
+
+
+   /***** PROJECTS SECTION STYLES *****/
+
+   .projects {
+     background-color: #FFFFFF;
+     font-size: 16px; /* root font size for ems */
+     padding: 25px 0;
+   }
+
+   .projects h2 {
+     padding-bottom: 16px;
+     font-size: 1.75em; /* 28px */
+     font-weight: 600;
+     color: #20022E;
+   }
+
+   .card {
+     border: 1px solid rgba(32,2,46,0.5) !important; /* #20022E - overrides Bootstrap */
+   }
+
+   .bg-card {
+     background-color: #FFFFFF;
+     border-radius: 5px;
+   }
+
+   .card-1, .card-2, .card-3, .card-4 {
+     margin-bottom: 50px;
+   }
+
+   h3.card-title {
+     color: #88579E;
+     font-size: 1.5em; /* 24px */
+     font-weight: 600;
+   }
+
+   p.card-text {
+     color: #20022E;
+     font-size: 1em;
+   }
+
+   .projects span.fas.fa-long-arrow-alt-right {
+     color: #88579E;
+     font-size: 2em;  /* 32px */
+   }
+
+
+
+   /***** FOOTER SECTION STYLES *****/
+
+   .contact {
+     background-color: #EAD8F2;
+     margin: 0;
+     font-size: 16px; /* root font size for ems */
+     padding-top: 50px;
+   }
+
+   .contact h2 {
+     color: #20022E;
+     font-size: 1.75em; /* 28px */
+     font-weight: 600;
+     margin: 0 !important; /* overrides Bootstrap */
+   }
+
+   .contact p {
+     font-size: 1em;
+     color: #20022E;
+     font-weight: 600;
+   }
+
+   .contact a span.fab.fa-github,
+   .contact a span.fab.fa-linkedin-in,
+   .contact a span.far.fa-envelope {
+     color: #20022E !important; /* overrides Bootstrap */
+     font-size: 1.375em; /* 22px */
+     margin-top: 16px;
+     padding-bottom: 75px;
+   }
+
+   p.copyright {
+     font-size: 0.625em; /* 10px */
+     padding: 0;
+     margin: 0;
+   }
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
 }
 
-p,
-a.nav-link,
-a.email {
-  font-family: 'Lato', sans-serif;
-}
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
 
-h1,
-h2,
-h3 {
-  font-family: 'Nunito Sans', sans-serif;
-}
-
-
-
-/******************** MOBILE STYLES *********************/
-
-/***** HEADER STYLES *****/
-
-header {
-  position: relative;
-  font-size: 16px; /* base font size for ems */
-}
-
-header .container-fluid {
-  padding: 0 !important; /* overrides boostrap */
-}
-
-nav {
-  position: absolute;
-  z-index: 300; /* stacks in front of particles and hero divs */
-  height: 10vh; /* 10% of viewport height */
-  background-color: #FFFFFF !important; /* overrides boostrap */
-}
-
-/* font awesome used for nav bar icon */
-button.navbar-toggler {
-  font-size: 1.75em; /* 28px */
-  padding: 8px 16px 0px 8px !important; /* overrides boostrap */
-}
-
-header span.fas.fa-bars {
-  color: #88579E;
-}
-
-ul.navbar-nav {
-  padding-left: 8px; /* lines up drop-down nav links with toggler icon */
-}
-
-a.nav-link {
-  font-size: 1em; /* 16px */
-  padding: 4px 0; /* for vertical spacing in dropdown */
-  color: #88579E;
-}
-
-.particles,
-.hero {
-  width: 100%;
-}
-
-.particles {
-  position: absolute;
-  top: 0; /* positions it to the top of the page */
-  height: 70vh; /* 70% of viewport height */
-  z-index: 200; /* stacks in front of hero section and behind navbar */
-  transform-style: preserve-3d;
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
   overflow: hidden;
-  cursor: pointer;
-}
-
-.hero {
-  height: 60vh;  /* 60% of viewport height to line up with particles div */
-  position: relative;
-  z-index: 100; /* stacks behind particle div and navbar */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFFFFF;
-}
-
-.hero .content-wrapper {
-  width: 50%;
-}
-
-.title {
-  font-size: 2.25em; /* 36px */
-  font-weight: 700;
-  color: #20022E;
-  width: 100%; /* full width of content wrapper */
-  text-align: center;
-  margin: 0;
-}
-
-/* particle animation */
-@keyframes move {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-
-  10% ,90% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(45vw);
-    opacity: 0;
-  }
-}
-
-
-
-/***** MAIN SECTION STYLES *****/
-
-main {
-  position: relative; /* keeps the container from overlapping with header */
-}
-
-
-
-/***** ABOUT SECTION STYLES *****/
-
-.about {
-  background-color: #FFFFFF;
-  font-size: 16px; /* root font size for ems */
-  padding: 50px 0;
-}
-
-figure {
-  width: 50%;
-  padding-bottom: 16px; /* 16px */
-}
-
-.about h3 {
-  font-size: 1.5em; /* 24px */
-  font-weight: 600;
-  color: #88579E;
-}
-
-.about p {
-  color: #20022E;
-  font-size: 1em; /* 16px */
-  line-height: 1.5em; /* 24px */
-  padding-bottom: 16px;
-}
-
-.about p span {
-  font-weight: 700;
-}
-
-.about span.fab.fa-github,
-.about span.fab.fa-linkedin-in,
-.about span.far.fa-envelope {
-  font-size: 1.25em; /* 20px */
-  color: #88579E; /* overrides boostrap */
-}
-
-.about span.fab.fa-linkedin-in {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.divider {
-  border-bottom: 1px solid rgba(32,2,46,0.5) !important; /* #20022E - overrides Bootstrap */
-  padding-top: 75px;
-}
-
-
-/***** PROJECTS SECTION STYLES *****/
-
-.projects {
-  background-color: #FFFFFF;
-  font-size: 16px; /* root font size for ems */
-  padding: 25px 0;
-}
-
-.projects h2 {
-  padding-bottom: 16px;
-  font-size: 1.75em; /* 28px */
-  font-weight: 600;
-  color: #20022E;
-}
-
-.card {
-  border: 1px solid rgba(32,2,46,0.5) !important; /* #20022E - overrides Bootstrap */
-}
-
-.bg-card {
-  background-color: #FFFFFF;
-  border-radius: 5px;
-}
-
-.card-1, .card-2, .card-3, .card-4 {
-  margin-bottom: 50px;
-}
-
-h3.card-title {
-  color: #88579E;
-  font-size: 1.5em; /* 24px */
-  font-weight: 600;
-}
-
-p.card-text {
-  color: #20022E;
-  font-size: 1em;
-}
-
-.projects span.fas.fa-long-arrow-alt-right {
-  color: #88579E;
-  font-size: 2em;  /* 32px */
-}
-
-
-
-/***** FOOTER SECTION STYLES *****/
-
-.contact {
-  background-color: #EAD8F2;
-  margin: 0;
-  font-size: 16px; /* root font size for ems */
-  padding-top: 50px;
-}
-
-.contact h2 {
-  color: #20022E;
-  font-size: 1.75em; /* 28px */
-  font-weight: 600;
-  margin: 0 !important; /* overrides Bootstrap */
-}
-
-.contact p {
-  font-size: 1em;
-  color: #20022E;
-  font-weight: 600;
-}
-
-.contact a span.fab.fa-github,
-.contact a span.fab.fa-linkedin-in,
-.contact a span.far.fa-envelope {
-  color: #20022E !important; /* overrides Bootstrap */
-  font-size: 1.375em; /* 22px */
-  margin-top: 16px;
-  padding-bottom: 75px;
-}
-
-p.copyright {
-  font-size: 0.625em; /* 10px */
   padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
   margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
 }
 
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
 
-
-
-
-/******************** TABLET STYLES *********************/
-
-@media (min-width: 768px){
-
-  /***** HEADER STYLES *****/
-
-  ul.navbar-nav {
-    padding: 15px 0 0 15px;
-  }
-
-  .title {
-    font-size: 2.5em; /* 40px */
-  }
-
-
-
-  /***** ABOUT SECTION STYLES *****/
-
-  .about {
-    font-size: 18px; /* root font size for ems */
-    padding-top: 100px;
-    padding-bottom: 50px;
-  }
-
-  figure {
-    width: 80%;
-    padding: 0;
-    margin-bottom: 0 !important; /* overrides bootstrap */
-    padding: 15px 15px 0 0;
-  }
-
-  .about h3 {
-    padding: 8px 0;
-    margin-bottom: 0 !important; /* overrides bootstrap */
-  }
-
-  .about p {
-    margin-bottom: 0 !important; /* overrides bootstrap */
-    padding-bottom: 0;
-  }
-
-  .about span.fab.fa-github,
-  .about span.fab.fa-linkedin-in,
-  .about span.far.fa-envelope {
-    padding-top: 15px ;
-  }
-
-  .divider {
-    padding-top: 100px;
-  }
-
-
-
-  /***** PROJECTS SECTION STYLES *****/
-
-  .projects {
-    font-size: 18px; /* root font size for ems */
-    padding: 50px 0;
-  }
-
-  .projects h2 {
-    padding-bottom: 50px;
-  }
-
-
-
-  /***** FOOTER SECTION STYLES *****/
-
-  .contact {
-    font-size: 18px; /* root font size for ems */
-  }
-
+.invisible {
+  visibility: hidden;
 }
 
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+   /******************** TABLET STYLES *********************/
+
+   @media (min-width: 768px){
+    /***** HEADER STYLES *****/
+
+     ul.navbar-nav {
+      padding: 15px 0 0 10px;
+     }
+
+     .navbar-expand-md .navbar-nav .nav-link {
+      padding-right: 2rem !important;
+     }
+
+     .title {
+       font-size: 2.5em; /* 40px */
+     }
+
+
+
+     /***** ABOUT SECTION STYLES *****/
+
+     .about {
+       font-size: 18px; /* root font size for ems */
+       padding-top: 100px;
+       padding-bottom: 50px;
+     }
+
+     figure {
+       max-width: 200px;
+       height: auto;
+       padding: 0;
+       margin-bottom: 0 !important; /* overrides bootstrap */
+     }
+
+     .about h3 {
+       padding: 8px 0;
+       margin-bottom: 0 !important; /* overrides bootstrap */
+     }
+
+     .about p {
+       margin-bottom: 0 !important; /* overrides bootstrap */
+       padding-bottom: 0;
+     }
+
+     .about span.fab.fa-github,
+     .about span.fab.fa-linkedin-in,
+     .about span.far.fa-envelope {
+       padding-top: 15px ;
+     }
+
+     .divider {
+       padding-top: 100px;
+     }
+
+
+
+     /***** PROJECTS SECTION STYLES *****/
+
+     .projects {
+       font-size: 18px; /* root font size for ems */
+       padding: 50px 0;
+     }
+
+     .projects h2 {
+       padding-bottom: 50px;
+     }
+
+
+
+     /***** FOOTER SECTION STYLES *****/
+
+     .contact {
+       font-size: 18px; /* root font size for ems */
+     }
+
+   }
 
 
 
 
-/******************** DESKTOP STYLES *********************/
 
-@media (min-width: 1200px){
+   /******************** DESKTOP STYLES *********************/
 
-  /***** HEADER STYLES *****/
+   @media (min-width: 1024px){
 
-  header {
-    font-size: 18px; /* base font size for ems */
+     /***** HEADER STYLES *****/
+
+     header {
+       font-size: 18px; /* base font size for ems */
+     }
+
+     ul.navbar-nav {
+       padding: 20px 0 0 20px;
+     }
+
+     .title {
+       font-size: 2.75em; /* 50px */
+     }
+
+     /***** ABOUT SECTION STYLES *****/
+
+     .about {
+       font-size: 20px; /* root font size for ems */
+       padding-top: 125px;
+       padding-bottom: 75px;
+     }
+
+     figure {
+       max-width: 250px;
+       margin-bottom: 0 !important;
+     }
+
+     .about h3 {
+       padding: 8px 0;
+       margin-bottom: 0 !important;
+     }
+
+     .about p {
+       margin-bottom: 0 !important;
+       padding-bottom: 0;
+     }
+
+     .about span.fab.fa-github,
+     .about span.fab.fa-linkedin-in,
+     .about span.far.fa-envelope {
+       padding-top: 20px ;
+     }
+
+     .divider {
+       padding-top: 125px;
+     }
+
+
+
+     /***** PROJECTS SECTION STYLES *****/
+
+     .projects {
+       font-size: 20px; /* root font size for ems */
+       padding-top: 75px;
+       padding-bottom: 75px;
+     }
+
+     .projects h2 {
+       padding-bottom: 75px;
+     }
+
+     .card-1, .card-2, .card-3, .card-4 {
+       margin-bottom: 75px;
+     }
+
+
+
+     /***** FOOTER SECTION STYLES *****/
+
+     .contact {
+       font-size: 20px; /* root font size for ems */
+       padding-top: 75px;
+     }
+
+     .contact a span.fab.fa-github,
+     .contact a span.fab.fa-linkedin-in,
+     .contact a span.far.fa-envelope {
+       padding-bottom: 75px;
+     }
+
+   }
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+/* Style adjustments for high resolution devices */
+ @media print,
+   (-webkit-min-device-pixel-ratio: 1.25),
+   (min-resolution: 1.25dppx),
+   (min-resolution: 120dpi) {
+ }
+
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
-  ul.navbar-nav {
-    padding: 20px 0 0 20px;
+  a,
+  a:visited {
+    text-decoration: underline;
   }
 
-  .title {
-    font-size: 2.75em; /* 50px */
+  a[href]::after {
+    content: " (" attr(href) ")";
   }
 
-  /***** ABOUT SECTION STYLES *****/
-
-  .about {
-    font-size: 20px; /* root font size for ems */
-    padding-top: 125px;
-    padding-bottom: 75px;
+  abbr[title]::after {
+    content: " (" attr(title) ")";
   }
 
-  figure {
-    width: 60%;
-    padding: 0;
-    margin-bottom: 0 !important;
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
   }
 
-  .about h3 {
-    padding: 8px 0;
-    margin-bottom: 0 !important;
+  pre {
+    white-space: pre-wrap !important;
   }
 
-  .about p {
-    margin-bottom: 0 !important;
-    padding-bottom: 0;
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
   }
 
-  .about span.fab.fa-github,
-  .about span.fab.fa-linkedin-in,
-  .about span.far.fa-envelope {
-    padding-top: 20px ;
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
   }
 
-  .divider {
-    padding-top: 125px;
+  tr,
+  img {
+    page-break-inside: avoid;
   }
 
-
-
-  /***** PROJECTS SECTION STYLES *****/
-
-  .projects {
-    font-size: 20px; /* root font size for ems */
-    padding-top: 75px;
-    padding-bottom: 75px;
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
   }
 
-  .projects h2 {
-    padding-bottom: 75px;
+  h2,
+  h3 {
+    page-break-after: avoid;
   }
-
-  .card-1, .card-2, .card-3, .card-4 {
-    margin-bottom: 75px;
-  }
-
-
-
-  /***** FOOTER SECTION STYLES *****/
-
-  .contact {
-    font-size: 20px; /* root font size for ems */
-    padding-top: 75px;
-  }
-
-  .contact a span.fab.fa-github,
-  .contact a span.fab.fa-linkedin-in,
-  .contact a span.far.fa-envelope {
-    padding-bottom: 125px;
-  }
-
 }
