@@ -167,6 +167,19 @@ textarea {
      color: #88579E;
    }
 
+   a.nav-link:link {
+     color: #88579E;
+   }
+
+   a.nav-link:visited {
+     color: #88579E;
+   }
+
+   a.nav-link:hover {
+     text-transform: uppercase;
+     color: #20022E;
+   }
+
    .particles,
    .hero {
      width: 100%;
@@ -269,13 +282,19 @@ textarea {
      color: #88579E; /* overrides boostrap */
    }
 
+   .about span.fab.fa-github:hover,
+   .about span.fab.fa-linkedin-in:hover,
+   .about span.far.fa-envelope:hover {
+     color: #20022E; /* overrides boostrap */
+   }
+
    .about span.fab.fa-linkedin-in {
      padding-left: 30px;
      padding-right: 30px;
    }
 
    .divider {
-     border-bottom: 1px solid rgba(32,2,46,0.5) !important; /* #20022E - overrides Bootstrap */
+     border-bottom: 1px solid rgba(32, 2, 46, 0.5) !important; /* #20022E - overrides Bootstrap */
      padding-top: 75px;
    }
 
@@ -324,6 +343,10 @@ textarea {
      font-size: 2em;  /* 32px */
    }
 
+   .projects span.fas.fa-long-arrow-alt-right:hover {
+     color: #20022E;
+     font-size: 2.5em;
+   }
 
 
    /***** FOOTER SECTION STYLES *****/
@@ -355,6 +378,12 @@ textarea {
      font-size: 1.375em; /* 22px */
      margin-top: 16px;
      padding-bottom: 75px;
+   }
+
+   .contact a span.fab.fa-github:hover,
+   .contact a span.fab.fa-linkedin-in:hover,
+   .contact a span.far.fa-envelope:hover {
+     color: #FFFFFF !important; /* overrides Bootstrap */
    }
 
    p.copyright {
