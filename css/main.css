@@ -158,12 +158,12 @@ textarea {
    }
 
    ul.navbar-nav {
-     padding-left: 8px; /* lines up drop-down nav links with toggler icon */
+     padding: 15px 0 0 8px; /* lines up drop-down nav links */
    }
 
    a.nav-link {
-     font-size: 1em; /* 16px */
-     padding: 4px 0; /* for vertical spacing in dropdown */
+     font-size: 1.125em; /* 18px */
+     padding: 12px 0; /* for vertical spacing in dropdown */
      color: #88579E;
    }
 
@@ -278,7 +278,7 @@ textarea {
    .about span.fab.fa-github,
    .about span.fab.fa-linkedin-in,
    .about span.far.fa-envelope {
-     font-size: 1.25em; /* 20px */
+     font-size: 1.5em; /* 20px */
      color: #88579E; /* overrides boostrap */
    }
 
@@ -375,7 +375,7 @@ textarea {
    .contact a span.fab.fa-linkedin-in,
    .contact a span.far.fa-envelope {
      color: #20022E !important; /* overrides Bootstrap */
-     font-size: 1.375em; /* 22px */
+     font-size: 1.5em; /* 22px */
      margin-top: 16px;
      padding-bottom: 75px;
    }
