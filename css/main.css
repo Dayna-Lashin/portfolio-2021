@@ -375,7 +375,7 @@ textarea {
    .contact a span.fab.fa-linkedin-in,
    .contact a span.far.fa-envelope {
      color: #20022E !important; /* overrides Bootstrap */
-     font-size: 1.5em; /* 22px */
+     font-size: 1.5em; /* 24px */
      margin-top: 16px;
      padding-bottom: 75px;
    }
@@ -580,7 +580,7 @@ textarea {
      }
 
      .title {
-       font-size: 2.75em; /* 50px */
+       font-size: 3em; /* 54px */
      }
 
      /***** ABOUT SECTION STYLES *****/
